@@ -117,7 +117,7 @@ Resources:
           }
       Handler: index.handler
       Role: !GetAtt AuthenticatorLambdaRole.Arn
-      Runtime: 'nodejs6.10'
+      Runtime: 'nodejs10.x'
       Timeout: '1' # as per lambda@edge limits
 
   AuthenticatorLambdaAutopublish:
@@ -217,7 +217,7 @@ Resources:
 
       Handler: index.handler
       Role: !GetAtt CustomPublishFunctionLambdaRole.Arn
-      Runtime: 'python3.6'
+      Runtime: 'python3.7'
       Timeout: '120'
 
   CustomPublishFunctionLambdaRole:
